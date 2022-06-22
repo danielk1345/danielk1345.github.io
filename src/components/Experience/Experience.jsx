@@ -2,71 +2,79 @@ import { VerticalTimeline, VerticalTimelineElement} from "react-vertical-timelin
 import React from 'react'
 import 'react-vertical-timeline-component/style.min.css';
 import "./Experience.css"
-import { Fade, JackInTheBox, Zoom, Slide } from "react-awesome-reveal";
+import { Fade, Slide } from "react-awesome-reveal";
+import ManuLogo from "../../images/ManuLogo.jpg";
+import GlobalSpark from "../../images/GlobalSpark.png";
 
 const Experience = () => {
   return (
     <section id="experience"> 
     <div>
         <div className="experience_highlight">
-          <Slide direction="right" duration={1500}>
-            <h1 style={{color: 'black', fontSize: '80px', fontFamily: 'Inter', fontWeight: 800, marginBottom: "10px", marginLeft: "50px", width: "800px", backgroundColor: "linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1))"}}> Experience</h1>
-            </Slide>
+          <Slide direction="left" duration={1500}>
+            <h1 style={{color: 'black', fontSize: '80px', fontFamily: 'Inter', fontWeight: 800, marginBottom: "10px", width: "600px", textAlign: "center"}}> Experience</h1>
+          </Slide>
         </div>
+        <div className="timeline"> 
         <VerticalTimeline animate={true}  layout="1-column" lineColor={ 'black' }>
-        <VerticalTimelineElement
-            className="vertical-timeline-element--work"
-            contentStyle={{ background: 'rgb(200, 150, 243)', color: '#fff'}}
-            contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
-            date="2011 - present"
-        >
-    <h2 className="vertical-timeline-element-position"> Manulife</h2>
-    <h3 className="vertical-timeline-element-title">Platform Reliability Software Engineer</h3>
-    <h4 className="vertical-timeline-element-subtitle"> Toronto, ON </h4>
-    <p>
-      Creative Direction, User Experience, Visual Design, Project Management, Team Leading
-    </p>
-  </VerticalTimelineElement>
-  <VerticalTimelineElement
-            className="vertical-timeline-element--work"
-            contentStyle={{ background: 'rgba(166, 231, 127, 0.75)', color: '#000000', height: '500px', borderRadius: '25px'}}
-            contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)', borderRadius: '100px' }}
-            date="May 2021 - present"
-        >
+            <VerticalTimelineElement
+                className="vertical-timeline-element"
+                contentStyle={{ background: 'rgb(200, 150, 243)', color: '#fff', height: '400px', borderRadius: '25px', width: "85%", position: "relative", left: "80px"}}
+                contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)', color: "black", margin: "100px"}}
+                iconStyle = {{width: 100, height: 100, justifyContent: "center", color: "black", overflow: "hidden", zIndex: 1000, left: "30px", top: "40%"}}
+                icon = {<img src={ManuLogo} style={{ width: 100, height:100}}/>}
+            >
+              <h2 className="position" style={{color: "white", fontSize: "40px", fontFamily: 'Inter', fontWeight: 400}}> Manulife</h2>
+              <h3 className="vertical-timeline-element-title">Platform Reliability Software Engineer</h3>
+              <h4 className="vertical-timeline-element-subtitle"> Toronto, ON </h4>
+              <h4 className="vertical-timeline-element-subtitle" style={{fontStyle: "italic"}}> May 2022 - Present </h4>
+              <h4 className="vertical-timeline-element-subtitle"> Tools: Python, JavaScript, Selenium, Kubernetes </h4>
+            </VerticalTimelineElement>
+            <VerticalTimelineElement
+                className="vertical-timeline-element"
+                contentStyle={{ background: '#f7e27e', color: '#fff', height: '400px', borderRadius: '25px', width: "85%", position: "relative", left: "80px"}}
+                contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)', color: "black", margin: "100px"}}
+                iconStyle = {{width: 100, height: 100, justifyContent: "center", color: "black", overflow: "hidden", zIndex: 1000, left: "30px", top: "40%"}}
+                icon = {<img src={GlobalSpark} style={{ width: 80, height:96}}/>}
+            >
+              <h2 className="position" style={{color: "white", fontSize: "40px", fontFamily: 'Inter', fontWeight: 400}}> Manulife</h2>
+              <h3 className="vertical-timeline-element-title">Platform Reliability Software Engineer</h3>
+              <h4 className="vertical-timeline-element-subtitle"> Toronto, ON </h4>
+              <h4 className="vertical-timeline-element-subtitle" style={{fontStyle: "italic"}}> May 2022 - Present </h4>
+              <h4 className="vertical-timeline-element-subtitle"> Tools: Python, JavaScript, Selenium, Kubernetes </h4>
+            </VerticalTimelineElement>
+            <VerticalTimelineElement
+                className="vertical-timeline-element"
+                contentStyle={{ background: 'rgba(130, 231, 127, 0.75)', color: '#fff', height: '400px', borderRadius: '25px', width: "85%", position: "relative", left: "80px"}}
+                contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)', color: "black", margin: "100px"}}
+                iconStyle = {{width: 100, height: 100, justifyContent: "center", color: "black", overflow: "hidden", zIndex: 1000, left: "30px", top: "40%"}}
+                icon = {<img src={ManuLogo} style={{ width: 100, height:100}}/>}
+            >
+              <h2 className="position" style={{color: "white", fontSize: "40px", fontFamily: 'Inter', fontWeight: 400}}> Manulife</h2>
+              <h3 className="vertical-timeline-element-title">Platform Reliability Software Engineer</h3>
+              <h4 className="vertical-timeline-element-subtitle"> Toronto, ON </h4>
+              <h4 className="vertical-timeline-element-subtitle" style={{fontStyle: "italic"}}> May 2022 - Present </h4>
+              <h4 className="vertical-timeline-element-subtitle"> Tools: Python, JavaScript, Selenium, Kubernetes </h4>
+            </VerticalTimelineElement>
 
-    <h3 className="vertical-timeline-element-title">Full-Stack Engineer</h3>
-    <h4 className="vertical-timeline-element-subtitle">Toronto, ON</h4>
-    <p>
-      Creative Direction, User Experience, Visual Design, Project Management, Team Leading
-    </p>
-  </VerticalTimelineElement>
-  <VerticalTimelineElement
-            className="vertical-timeline-element--work"
-            contentStyle={{ background: '#A8D0E6', color: '#000000' }}
-            contentArrowStyle={{ borderLeft: '7px solid ' }}
-            date="May 2021 - present"
-        >
-    <h3 className="vertical-timeline-element-title">Creative Director</h3>
-    <h4 className="vertical-timeline-element-subtitle">Miami, FL</h4>
-    <p>
-      Wah wah wah
-    </p>
-  </VerticalTimelineElement>
-  <VerticalTimelineElement
-            className="vertical-timeline-element--work"
-            contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-            contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
-            date="2011 - present"
-        >
-    <h3 className="vertical-timeline-element-title">Creative Director</h3>
-    <h4 className="vertical-timeline-element-subtitle">Miami, FL</h4>
-    <p>
-      Creative Direction, User Experience, Visual Design, Project Management, Team Leading
-    </p>
-  </VerticalTimelineElement>
+            <VerticalTimelineElement
+                className="vertical-timeline-element"
+                contentStyle={{ background: 'black', color: '#fff', height: '400px', borderRadius: '20px', width: "85%", position: "relative", left: "80px"}}
+                contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)', color: "black", margin: "100px"}}
+                iconStyle = {{width: 100, height: 100, justifyContent: "center", color: "black", overflow: "hidden", zIndex: 1000, left: "30px", top: "40%"}}
+                icon = {<img src={ManuLogo} style={{ width: 100, height:100}}/>}
+            >
+              <h2 className="position" style={{color: "white", fontSize: "40px", fontFamily: 'Inter', fontWeight: 400}}> Manulife</h2>
+              <h3 className="vertical-timeline-element-title">Platform Reliability Software Engineer</h3>
+              <h4 className="vertical-timeline-element-subtitle"> Toronto, ON </h4>
+              <h4 className="vertical-timeline-element-subtitle" style={{fontStyle: "italic"}}> May 2022 - Present </h4>
+              <h4 className="vertical-timeline-element-subtitle"> Tools: Python, JavaScript, Selenium, Kubernetes </h4>
+            </VerticalTimelineElement>
   
         </VerticalTimeline>
+        </div>
     </div>
+    
     </section>
     
   )

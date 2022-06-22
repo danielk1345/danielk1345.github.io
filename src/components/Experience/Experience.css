@@ -1,7 +1,4 @@
-.experience{
-    background-color: #A8D0E6;
-    color: #A8D0E6;
-}
+
 
 .text{
     color: 'white';
@@ -10,6 +7,34 @@
     font-weight: 600;
 }
 .experience_highlight {
+    position: absolute;
     width: 600px;
-    background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
-  }
+    background-image: linear-gradient(to right, #A8D0E6, #A8D0E6); 
+    border-radius: 20px;
+    align-items: center;
+    left: 2%;
+    top: -50;
+    z-index: 1000;
+}
+
+.position {
+    color: white;
+    font-size: 90px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+}
+
+.date-style {
+    color: black
+}
+
+img{
+    overflow: hidden;
+}
+
+.timeline {
+    position: absolute;
+    left: 8%;
+    margin-top: 100px;
+    width: 80%;
+}

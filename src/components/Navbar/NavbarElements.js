@@ -21,6 +21,7 @@ export const Nav = styled.nav`
 
 export const NavbarContainer = styled.div`
     display: flex;
+    overflow: hidden;
     justify-content: space-between;
     height: 80px;
     z-index: 1;
@@ -73,7 +74,7 @@ export const NavLinks = styled(LinkS)`
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    text-decoration: none;
+
     padding: 0 1rem;
     height: 100%;
     cursor: pointer;
