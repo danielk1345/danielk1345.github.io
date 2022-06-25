@@ -5,7 +5,7 @@ import './About.css'
 
 export default function About() {
   return (
-    <section id="about" style={{height: "130vh"}}>
+    <section id="about" style={{height: "120vh"}}>
       <div className="about_container">
       
         <div className="about_content"> 
