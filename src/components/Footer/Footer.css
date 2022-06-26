@@ -1,0 +1,20 @@
+#footer{
+    background-color: #A8D0E6;
+    color: white;
+    text-align: center;
+}
+
+.copyright{
+    padding: 1rem;
+    font-size: 1rem;
+}
+
+.socials_btns{
+    position: absolute;
+    width: 600px;
+    height: 80px;
+    left: 180px;
+    top: 600px;
+    flex-direction: row;
+    justify-content: space-evenly;
+}

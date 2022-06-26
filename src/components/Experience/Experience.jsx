@@ -11,7 +11,7 @@ import UWLogo from "../../images/WlooLogo.png"
 
 const Experience = () => {
   return (
-    <section id="experience" style={{marginBottom: "30px"}}> 
+    <section id="experience" style={{marginBottom: "50px"}}> 
     <div>
         <div className="experience_highlight">
           <Slide direction="left" duration={1500}>

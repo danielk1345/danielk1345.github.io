@@ -5,9 +5,10 @@ import { ChakraProvider, ColorModeScript } from "@chakra-ui/react";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <ChakraProvider>
-      <ColorModeScript initialColorMode="light"></ColorModeScript>
+  <React.StrictMode>
+    <ChakraProvider>
       <App />
-  </ChakraProvider>
+    </ChakraProvider>
+  </React.StrictMode>
 );
 

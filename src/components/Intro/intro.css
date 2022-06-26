@@ -101,7 +101,7 @@
     color: black;
     font-family: 'Inter' 'sans serif';
     text-align: center;
-    font-size: 32px;
+    font-size: 50px;
     padding: 16px;
     position: absolute;
     width: 416px;
@@ -124,7 +124,7 @@
     content: '»';
     position: absolute;
     opacity: 0;  
-    top: 40px;
+    top: 18px;
     right: -20px;
     transition: 0.5s;
   }

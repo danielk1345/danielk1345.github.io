@@ -4,6 +4,7 @@ import "./intro.css"
 import Typewriter from 'typewriter-effect'
 import { FaGithub, FaLinkedin, FaEnvelope} from "react-icons/fa";
 import { Fade } from "react-awesome-reveal";
+import Resume from "../../files/DanielKimResume.pdf";
 
 
 const Intro = () => {
@@ -35,7 +36,7 @@ const Intro = () => {
         </div>
         <div className="right-header"> 
                 <div className="container">
-                    <button className="hover-btn-1"> Resume</button>
+                <a className="hover-btn-1" href={Resume} target="_blank"> Resume</a> 
                 </div>
         </div>
       </section>
