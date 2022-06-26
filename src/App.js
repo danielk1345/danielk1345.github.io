@@ -5,6 +5,7 @@ import Welcome from './pages/welcome';
 import About from './components/About/About';
 import Experience from './components/Experience/Experience';
 import Projects from './components/Projects/Projects';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <About />
       <Experience />
       <Projects />
+      <Footer />
     </Router>
   );
 }
