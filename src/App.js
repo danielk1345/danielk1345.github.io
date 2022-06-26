@@ -9,7 +9,7 @@ import Footer from './components/Footer/Footer';
 
 function App() {
   return (
-    <Router>
+    <Router basename='{process.env..PUBLIC_URL}'>
       <Welcome />
       <About />
       <Experience />
