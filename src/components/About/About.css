@@ -4,11 +4,12 @@
     grid-template-columns: 45% 45%; 
     gap: 10%;
     color:#A8D0E6;
+    overflow: hidden;
 }
 
 .about_me {
     width: 100%;
-    height: fit-content;
+
     border-radius: 2rem;
     display: grid;
     margin-top: 150px;

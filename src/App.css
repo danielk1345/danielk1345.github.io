@@ -8,4 +8,5 @@
 
 section {
   overflow: hidden;
+  max-height: max-content;
 }

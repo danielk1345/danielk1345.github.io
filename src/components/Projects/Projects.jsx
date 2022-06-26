@@ -16,7 +16,7 @@ const Projects = () => {
             <h1 style={{color: 'black', fontSize: '80px', fontFamily: 'Inter', fontWeight: 800, marginBottom: "10px", width: "600px", textAlign: "center"}}> Projects</h1>
           </Slide>
         </div>
-		<div style={{position: "relative", left: "600px", top: "150px", height: 150 ,width: 750, display: 'flex', alignItems: "center", textAlign: 'center', marginTop: '20px', marginBottom: 0}}>
+		<div style={{ position: "relative", display: "flex", height: 150 ,width: "50%", margin: "auto", textAlign: 'center', top: "200px"}}>
 			<AttentionSeeker delay={250} duration={1000}> 
 			<p style={{color: 'black', fontSize: '30px', fontFamily: 'Inter', fontWeight: "550"}}>
                 Come check out some of the projects I've done! 🧑‍💻 
