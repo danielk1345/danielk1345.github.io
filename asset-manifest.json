@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.f0acc57b.css",
-    "main.js": "/static/js/main.654d6724.js",
+    "main.css": "/static/css/main.dc8bb75d.css",
+    "main.js": "/static/js/main.755e57f0.js",
     "static/media/Schooldule.png": "/static/media/Schooldule.2a80179e37727e77031b.png",
     "static/media/WlooLogo.png": "/static/media/WlooLogo.4f899ab4e8198a3ba480.png",
     "static/media/DanielKimResume.pdf": "/static/media/DanielKimResume.a9bd39dec23bbe2e413d.pdf",
@@ -10,11 +10,11 @@
     "static/media/csClub.jpg": "/static/media/csClub.f1781c28af54131018d5.jpg",
     "static/media/ManuLogo.jpg": "/static/media/ManuLogo.b6a8c0893d58308b9be9.jpg",
     "index.html": "/index.html",
-    "main.f0acc57b.css.map": "/static/css/main.f0acc57b.css.map",
-    "main.654d6724.js.map": "/static/js/main.654d6724.js.map"
+    "main.dc8bb75d.css.map": "/static/css/main.dc8bb75d.css.map",
+    "main.755e57f0.js.map": "/static/js/main.755e57f0.js.map"
   },
   "entrypoints": [
-    "static/css/main.f0acc57b.css",
-    "static/js/main.654d6724.js"
+    "static/css/main.dc8bb75d.css",
+    "static/js/main.755e57f0.js"
   ]
 }
