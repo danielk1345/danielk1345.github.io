@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <section id="footer"> 
     <footer className="footer">
-      <div style={{fontWeight: "normal"}}> Thanks for checking out my personal website! I'm always open to new connections so please feel free to reach out to me via Email, LinkedIn or check out my Resume! </div>
+      <div style={{fontWeight:"bold"}}> Thanks for checking out my personal website! I'm always open to new connections so please feel free to reach out to me via Email, LinkedIn or check out my Resume! </div>
       <div style={{display: "flex", alignItems: "center", justifyContent: "space-evenly", margin: "10px"}}> 
             <a href='https://github.com/danielk1345'> <FaGithub style={{color: 'black', fontSize: '40px'}}/> </a>
               <a href='mailto: dj7kim@uwaterloo.ca'> <FaEnvelope style={{color: 'black', fontSize: '40px'}}/> </a>
