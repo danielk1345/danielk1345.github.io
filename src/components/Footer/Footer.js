@@ -5,7 +5,6 @@ import Resume from "../../files/DanielKimResume.pdf";
 
 const Footer = () => {
   return (
-    <section id="footer"> 
     <footer className="footer">
       <div style={{fontWeight:"bold"}}> Thanks for checking out my personal website! I'm always open to new connections so please feel free to reach out to me via Email, LinkedIn or check out my Resume! </div>
       <div style={{display: "flex", alignItems: "center", justifyContent: "space-evenly", margin: "10px"}}> 
@@ -19,7 +18,6 @@ const Footer = () => {
         <em>Copyright &copy; Daniel Kim</em>
       </div>
     </footer>
-    </section>
   );
 };
 
