@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/danielk1345.github.io/static/css/main.dc8bb75d.css",
-    "main.js": "/danielk1345.github.io/static/js/main.36c361c6.js",
-    "static/media/Schooldule.png": "/danielk1345.github.io/static/media/Schooldule.2a80179e37727e77031b.png",
-    "static/media/WlooLogo.png": "/danielk1345.github.io/static/media/WlooLogo.4f899ab4e8198a3ba480.png",
-    "static/media/DanielKimResume.pdf": "/danielk1345.github.io/static/media/DanielKimResume.a9bd39dec23bbe2e413d.pdf",
-    "static/media/GlobalSpark.png": "/danielk1345.github.io/static/media/GlobalSpark.f3f2b037bf0284866514.png",
-    "static/media/Daniel_Kim_headshot_2.jpg": "/danielk1345.github.io/static/media/Daniel_Kim_headshot_2.c4b91525eba7d008e100.jpg",
-    "static/media/csClub.jpg": "/danielk1345.github.io/static/media/csClub.f1781c28af54131018d5.jpg",
-    "static/media/ManuLogo.jpg": "/danielk1345.github.io/static/media/ManuLogo.b6a8c0893d58308b9be9.jpg",
-    "index.html": "/danielk1345.github.io/index.html",
-    "main.dc8bb75d.css.map": "/danielk1345.github.io/static/css/main.dc8bb75d.css.map",
-    "main.36c361c6.js.map": "/danielk1345.github.io/static/js/main.36c361c6.js.map"
+    "main.css": "/static/css/main.dc8bb75d.css",
+    "main.js": "/static/js/main.3df1788c.js",
+    "static/media/Schooldule.png": "/static/media/Schooldule.2a80179e37727e77031b.png",
+    "static/media/WlooLogo.png": "/static/media/WlooLogo.4f899ab4e8198a3ba480.png",
+    "static/media/DanielKimResume.pdf": "/static/media/DanielKimResume.a9bd39dec23bbe2e413d.pdf",
+    "static/media/GlobalSpark.png": "/static/media/GlobalSpark.f3f2b037bf0284866514.png",
+    "static/media/Daniel_Kim_headshot_2.jpg": "/static/media/Daniel_Kim_headshot_2.c4b91525eba7d008e100.jpg",
+    "static/media/csClub.jpg": "/static/media/csClub.f1781c28af54131018d5.jpg",
+    "static/media/ManuLogo.jpg": "/static/media/ManuLogo.b6a8c0893d58308b9be9.jpg",
+    "index.html": "/index.html",
+    "main.dc8bb75d.css.map": "/static/css/main.dc8bb75d.css.map",
+    "main.3df1788c.js.map": "/static/js/main.3df1788c.js.map"
   },
   "entrypoints": [
     "static/css/main.dc8bb75d.css",
-    "static/js/main.36c361c6.js"
+    "static/js/main.3df1788c.js"
   ]
 }
