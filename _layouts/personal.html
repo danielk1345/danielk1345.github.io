@@ -1,0 +1,373 @@
+---
+---
+
+<!doctype html>
+{% include copyright.html %}
+<html lang="{{ site.locale | replace: "_", "-" | default: "en" }}" class="no-js">
+  <head>
+    {% include head.html %}
+    {% include head/custom.html %}
+    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700&display=swap" rel="stylesheet">
+    <style>
+      body {
+        background-color: #f5f5f5; /* Cream background */
+        margin: 0;
+        padding: 0;
+        font-family: 'Libre Baskerville', serif;
+        font-size: 15px;
+        line-height: 1.6;
+        color: #111;
+        overflow-x: hidden;
+      }
+      
+      .personal-container {
+        display: flex;
+        min-height: 100vh;
+      }
+      
+      .sidebar {
+        width: 210px;
+        background: none;
+        color: #111;
+        padding: 2.5rem 0 0 0;
+        position: fixed;
+        height: 100vh;
+        overflow-y: hidden;
+        border: none;
+        box-shadow: none;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        overflow-x: hidden;
+      }
+      
+      .sidebar-header {
+        display: none;
+      }
+      
+      .sidebar-nav {
+        width: 100%;
+        padding: 0 0 0 2rem;
+      }
+      .sidebar-nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .sidebar-nav li {
+        margin-bottom: 1.5rem;
+      }
+      .sidebar-nav a {
+        color: #111;
+        text-decoration: none;
+        font-size: 1.1rem;
+        font-family: 'Libre Baskerville', serif;
+        font-weight: 400;
+        transition: color 0.2s, font-weight 0.2s;
+        padding: 0;
+        background: none;
+        border: none;
+        border-radius: 0;
+        display: inline-block;
+      }
+      .sidebar-nav a.active, .sidebar-nav a:focus, .sidebar-nav a:hover {
+        font-weight: 700;
+        color: #111;
+        background: none;
+      }
+      
+      .main-content {
+        flex: 1;
+        margin-left: 210px;
+        padding: 2.5rem 2.5rem;
+        max-width: 1200px;
+        font-family: 'Libre Baskerville', serif;
+        color: #111;
+        overflow-x: hidden;
+      }
+      
+      .section {
+        margin-bottom: 0.5rem;
+        padding: 0;
+        position: relative;
+      }
+      .section:not(:first-child) {
+        padding-top: 3rem;
+      }
+      .section:not(:first-child)::before {
+        content: '';
+        display: block;
+        width: 60px;
+        height: 3px;
+        background: #222;
+        opacity: 0.08;
+        border-radius: 2px;
+        margin-bottom: 2rem;
+      }
+      
+      /* About section flex layout */
+      #about.section {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        min-height: 320px;
+        overflow-x: hidden;
+      }
+      .about-image {
+        width: 320px;
+        height: 420px;
+        background: #e0e0e0;
+        border-radius: 8px;
+        margin-right: 3.5rem;
+        flex-shrink: 0;
+        box-shadow: 0 4px 24px 0 rgba(0,0,0,0.04);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+      }
+      .about-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 8px;
+      }
+      .about-content {
+        flex: 1;
+        font-size: 1.2rem;
+        min-width: 0;
+      }
+      .about-headline {
+        font-size: 3.2rem;
+        font-weight: 900;
+        line-height: 1.05;
+        margin-bottom: 2rem;
+        color: #111;
+        letter-spacing: -0.01em;
+        text-transform: none;
+      }
+      .about-headline strong {
+        display: block;
+      }
+      .about-subtext {
+        font-size: 0.8rem;
+        font-weight: 400;
+        color: #111;
+        margin-bottom: 0;
+        margin-top: 0.5rem;
+        line-height: 1.7;
+      }
+      /* Artistic accent: subtle colored dot */
+      .section-title-dot {
+        display: none;
+      }
+      .section h2 {
+        color: #111;
+        margin-top: 0;
+        margin-bottom: 1.2rem;
+        font-size: 2.5rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+        line-height: 1.1;
+        display: block;
+      }
+      .section-title-hr {
+        border: none;
+        height: 4px;
+        width: 95%;
+        background: #111;
+        opacity: 1;
+        border-radius: 2px;
+        margin: 0 0 2.5rem 0;
+      }
+      
+      .section h3 {
+        color: #111;
+        margin-top: 1.5rem;
+        margin-bottom: 1rem;
+        font-size: 1.3rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.02em;
+      }
+      
+      .section p, .section li {
+        color: #111;
+        font-size: 1em;
+      }
+      
+      /* Remove card look, keep everything flat and clean */
+      .section, .main-content, .sidebar {
+        background: none;
+        box-shadow: none;
+        border: none;
+      }
+      
+      /* Remove contact icons and sidebar header for minimalism */
+      .contact-icons, .sidebar-header {
+        display: none;
+      }
+      
+      .experience-item {
+        margin-bottom: 1.1rem;
+        padding-bottom: 1.1rem;
+      }
+      
+      .experience-title {
+        font-weight: 600;
+        color: #202a33;
+        margin-bottom: 0.5rem;
+        font-size: 1.2rem;
+      }
+      
+      .experience-company {
+        color: #525b5c;
+        font-weight: 500;
+        margin-bottom: 0.5rem;
+      }
+      
+      .experience-date {
+        color: #525b5c;
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+      }
+      
+      .experience-description {
+        color: #000000;
+      }
+      
+      @media (max-width: 768px) {
+        .personal-container {
+          flex-direction: column;
+        }
+        .sidebar {
+          width: 100%;
+          height: auto;
+          position: relative;
+          border: none;
+          border-bottom: none;
+          align-items: flex-start;
+          padding: 1.5rem 0 0 0;
+        }
+        .sidebar-nav {
+          padding-left: 1.5rem;
+        }
+        .main-content {
+          margin-left: 0;
+          padding: 2rem 1rem;
+        }
+      }
+      
+      @media (max-width: 900px) {
+        #about.section {
+          flex-direction: column;
+          align-items: flex-start;
+          overflow-x: hidden;
+        }
+        .about-image {
+          margin-right: 0;
+          margin-bottom: 1rem;
+        }
+        .about-content {
+          width: 100%;
+        }
+      }
+      
+      .sidebar-icons {
+        display: flex;
+        flex-direction: row;
+        gap: 1.1rem;
+        margin-left: 2rem;
+        margin-bottom: 2rem;
+        flex-wrap: wrap;
+        max-width: 90%;
+        overflow-x: hidden;
+      }
+      .sidebar-icons a {
+        color: #111;
+        font-size: 1.35rem;
+        transition: color 0.2s, opacity 0.2s;
+        opacity: 0.85;
+      }
+      .sidebar-icons a:hover {
+        color: #0072b1;
+        opacity: 1;
+      }
+      
+      /* Horizontal spacing for links in contact section */
+      #contact.section a {
+        margin-right: 18rem;
+        display: inline-block;
+      }
+      #contact.section a:last-child {
+        margin-right: 0;
+      }
+    </style>
+  </head>
+
+  <body class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}" dir="{% if site.rtl %}rtl{% else %}ltr{% endif %}">
+    <div class="personal-container">
+      <div class="sidebar">
+        <div class="sidebar-header">
+          <h1>{{ site.title | default: "Your Name" }}</h1>
+          <p>{{ site.subtitle | default: "Software Developer" }}</p>
+        </div>
+        
+        <nav class="sidebar-nav">
+          <ul>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#experience" class="nav-link">Experience</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="sidebar-icons">
+          <a href="mailto:dj7kim@uwaterloo.ca" title="Email" target="_blank" rel="noopener"><i class="fas fa-envelope"></i></a>
+          <a href="https://github.com/danielk1345" title="GitHub" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/danielk1345/" title="LinkedIn" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+      
+      <div class="main-content">
+        {{ content }}
+      </div>
+    </div>
+
+    <script>
+      // Smooth scrolling for navigation links
+      document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('href').substring(1);
+          const targetSection = document.getElementById(targetId);
+          if (targetSection) {
+            targetSection.scrollIntoView({ behavior: 'smooth' });
+          }
+        });
+      });
+      
+      // Highlight active section in navigation
+      window.addEventListener('scroll', function() {
+        const sections = document.querySelectorAll('.section');
+        const navLinks = document.querySelectorAll('.nav-link');
+        
+        let current = '';
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.clientHeight;
+          if (pageYOffset >= sectionTop - 200) {
+            current = section.getAttribute('id');
+          }
+        });
+        
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === '#' + current) {
+            link.classList.add('active');
+          }
+        });
+      });
+    </script>
+  </body>
+</html> 
